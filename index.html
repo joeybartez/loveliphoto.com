@@ -5,17 +5,155 @@
 	<meta charset="utf-8">
 
 	<link href="universal.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
 	<link href="index.css" rel="stylesheet">
+	<link href="nav.css" rel="stylesheet">
+
+	<script type="text/javascript" src="nav.js" async></script>
+	
+	<script type="text/javascript" src="about.js" defer></script>
+	<script src="https://smtpjs.com/v3/smtp.js" defer></script>
+	<script type="text/javascript" src="email.js" defer></script>
 
 	<title>LOVE LI PHOTOGRAPHY</title>
 </head>
 
 <body>
+	
 	<header>
-		<h1>WELCOME TO<br>
-			LOVE LI PHOTOGRAPHY
-		</h1>
+		<h1>WELCOME TO</h1>
+		<h1>LOVE LI PHOTOGRAPHY</h1>
+		<div class="down-arrow">
+			<a href="#about">
+				<img src="downwhite.png">
+			</a>
+		</div>
 	</header>
+
+	<nav>
+		<div id="nav-button">
+			<button id="nav-button-text">MENU</button>
+			<button id="nav-button-icon">+</button>
+		</div>
+		<div id="nav-content">
+			<h4>Navigate</h4>
+			<div id="nav-line"></div>
+			<a href="#">HOME</a>
+			<a href="#about">ABOUT</a>
+			<a href=#portfolio>PORTFOLIO</a>
+			<a href="#contact-page">CONTACT</a>
+		</div>
+
+	</nav>
+
+	<section id="about" class="about-center">
+		<div id="betty-bio" class="about-side-panel">
+			<div class="about-hidden-panel">
+				<article>
+					<h2>Betty Li</h2>
+					<p>Type here using Sitecake</p>
+				</article>
+			</div>
+			<div class="about-img-panel">
+				<img src="betty-bio.jpg">
+				<div class="about-button">
+					<button id="meet-betty"><span>&#8249;</span> MEET BETTY</button>
+					<button id="meet-betty-back" class="about-back-button hidden">GO BACK <span>&#8250;</span></button>
+				</div>
+			</div>
+		</div>
+		<div id="about-center-panel">
+			<div class="section-content">
+				<h2>Meet the Photographers</h2>
+				<p>Type here using Sitecake</p>
+			</div>
+			<div class="down-arrow">
+				<a href="#portfolio">
+					<img src="downwhite.png">
+				</a>
+			</div>
+		</div>
+		<div id="sharon-bio" class="about-side-panel">
+			<div class="about-img-panel">
+				<img src="sharon-bio.jpg">
+				<div class="about-button">
+					<button id="meet-sharon">MEET SHARON <span>&#8250;</span></button>
+					<button id="meet-sharon-back" class="about-back-button hidden"><span>&#8249;</span> GO BACK</button>
+				</div>
+			</div>
+			<div class="about-hidden-panel">
+				<article>
+					<h2>Sharon Kosasih</h2>
+					<p>Type here using Sitecake</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="parallax-1" class="parallax">
+
+	</section>
+
+	<section id="portfolio">
+		<div class="section-content">
+			<div id="portfolio-text">
+				<p>CHECK OUT THE</p>
+				<h2>portfolio</h2>
+			</div>
+			<div id="portfolio-links">
+				<a href="#">
+					<img src="60.jpg">
+					<figcaption>
+						<h3>SENIORS</h3>
+					</figcaption>
+				</a>
+				<a href="#">
+					<img src="99.jpg">
+					<figcaption>
+						<h3>WEDDINGS</h3>
+					</figcaption>
+				</a>
+				<a href="#">
+					<img src="16.jpg">
+					<figcaption>
+						<h3>COUPLES</h3>
+					</figcaption>
+				</a>
+				<a href="#">
+					<img src="24.jpg">
+					<figcaption>
+						<h3>FAMILIES</h3>
+					</figcaption>
+				</a>
+			</div>
+		</div>
+		<div class="down-arrow">
+			<a href="#contact-page">
+				<img src="downpink.png">
+			</a>
+		</div>
+	</section>
+
+	<section id="parallax-2" class="parallax">
+
+	</section>
+
+	<section id="contact-page">
+		<h2>say hello!</h2>
+		<form id="contact-form">
+			<div id="name-tel">
+				<input type="text" name="name" placeholder="NAME" autocomplete='name'>
+				<input type="text" name="phone" placeholder="PHONE" autocomplete='tel'>
+			</div>
+			<input type="text" name="email" placeholder="EMAIL" autocomplete='email'>
+			<input type="text" name="subject" placeholder="SUBJECT LINE">
+			<textarea name="message" placeholder="MESSAGE" rows="7"></textarea>
+			<input type="submit" name="submit" value="SEND">
+		</form>
+	</section>
+
 </body>
 
 </html>
