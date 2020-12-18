@@ -1,8 +1,14 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function(event) {
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', doSomething);
+} else {
+	doSomething();
+}
+
+function doSomething() {
 	document.getElementById('contact-form').addEventListener('submit', sendEmail);
-});
+}
 
 function sendEmail(event) {
 	event.preventDefault();

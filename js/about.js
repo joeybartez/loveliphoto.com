@@ -1,13 +1,19 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function(event) {
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', doSomething);
+} else {
+	doSomething();
+}
+
+function doSomething() {
 	resizeAbout();
 	window.addEventListener('resize', resizeAbout);
 	document.getElementById('meet-betty').addEventListener('click', meetBetty);
 	document.getElementById('meet-betty-back').addEventListener('click', meetBetty);
 	document.getElementById('meet-sharon').addEventListener('click', meetSharon);
 	document.getElementById('meet-sharon-back').addEventListener('click', meetSharon);
-});
+}
 
 function resizeAbout() {
 	let portfolio = document.getElementById('portfolio');
