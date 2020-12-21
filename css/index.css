@@ -141,7 +141,7 @@ header h1 {
 	align-items: center;
 }
 
-.about-hidden-panel .sc-content {
+.about-hidden-panel article {
 	width: 40vw;
 	height: 80vh;
 	background: var(--llpink);
