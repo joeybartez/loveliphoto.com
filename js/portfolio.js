@@ -22,15 +22,23 @@ function initGallery() {
 	photos = document.getElementById('gallery').children;
 	for (let i = 0; i < photos.length; i++) {
 		let img = photos[i];
-		img.onload = function() {
-			if (img.naturalHeight > img.naturalWidth) {
-				img.classList.add('portrait');
-			} else {
-				img.classList.add('landscape');
-			}
-			img.addEventListener('click', enterSpotlight);
+		if (img.complete) {
+			initImg(img);
+		} else {
+			img.addEventListener('load', function() {
+				initImg(img);
+			});
 		}
 	}
+}
+
+function initImg(img) {
+	if (img.naturalHeight > img.naturalWidth) {
+		img.classList.add('portrait');
+	} else {
+		img.classList.add('landscape');
+	}
+	img.addEventListener('click', enterSpotlight);
 }
 
 function initSpotlight() {
@@ -42,14 +50,13 @@ function initSpotlight() {
 	document.getElementById('right-arrow').addEventListener('click', nextPhoto);
 }
 
-
 function enterSpotlight(event) {
 	document.body.classList.toggle('spotlight');
 
 	let img = event.currentTarget;
 	i = Array.from(photos).indexOf(img);
 	spotlightImg = img.cloneNode();
-	
+
 	spotlight.appendChild(spotlightImg);
 	toggleArrows();
 }
