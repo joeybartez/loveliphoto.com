@@ -7,18 +7,10 @@ if (document.readyState === 'loading') {
 }
 
 function doSomething() {
-	resizeAbout();
-	window.addEventListener('resize', resizeAbout);
 	document.getElementById('meet-betty').addEventListener('click', meetBetty);
 	document.getElementById('meet-betty-back').addEventListener('click', meetBetty);
 	document.getElementById('meet-sharon').addEventListener('click', meetSharon);
 	document.getElementById('meet-sharon-back').addEventListener('click', meetSharon);
-}
-
-function resizeAbout() {
-	let portfolio = document.getElementById('portfolio');
-	let yScrollBarWidth = window.innerWidth - document.body.offsetWidth;
-	document.documentElement.style.setProperty('--y-scroll-bar-width', yScrollBarWidth + 'px');
 }
 
 function meetBetty(event) {
