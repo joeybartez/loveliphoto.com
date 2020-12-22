@@ -1,16 +1,32 @@
-header img {
+#cover-photo {
 	object-fit: cover;
-	height: calc(100vh - 5rem);
 	width: 100%;
 }
 
 nav {
-	height: 5rem;
 	position: sticky;
 	top: 0;
 	z-index: 1;
 	background: white;
-	border: medium solid blue;
+	padding: 1.25rem;
+}
+
+h1 {
+	font-family: 'Lato', 'Verdana', sans-serif;
+	font-weight: 400;
+	color: var(--llgrey);
+	font-size: 1.5rem;
+}
+
+a {
+	font-family: 'Lato', 'Verdana', sans-serif;
+	font-weight: 300;
+	color: var(--llgrey);
+	font-size: 1.25rem;
+}
+
+a:hover {
+	color: var(--llpink);
 }
 
 #gallery {

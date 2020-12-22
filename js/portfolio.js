@@ -14,8 +14,26 @@ if (document.readyState === 'loading') {
 }
 
 function doSomething() {
+	initCoverPhoto();
 	initGallery();
 	initSpotlight();
+}
+
+function initCoverPhoto() {
+	let img = document.getElementById('cover-photo');
+	if (img.complete) {
+		resizeCoverPhoto();
+	} else {
+		img.addEventListener('load', function() {
+			resizeCoverPhoto();
+		});
+	}
+}
+
+function resizeCoverPhoto() {
+	let img = document.getElementById('cover-photo');
+	let navHeight = document.querySelector('nav').offsetHeight;
+	img.style.height = 'calc(100vh - ' + navHeight + 'px)';
 }
 
 function initGallery() {
